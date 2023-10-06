@@ -1,29 +1,28 @@
-void setup()
-{
-	noLoop();
+
+      int randint(int tippitytop) {
+  return((int) (Math.random()*(tippitytop+1)));
 }
-void draw()
-{
-	//your code here
-}
-void mousePressed()
-{
-	redraw();
-}
-class Die //models one single dice cube
-{
-	//variable declarations here
-	
-	Die(int x, int y) //constructor
-	{
-		//variable initializations here
-	}
-	void roll()
-	{
-		//your code here
-	}
-	void show()
-	{
-		//your code here
-	}
-}
+
+        void setup()
+  {
+    size(500,600);
+   
+      noLoop();
+  }
+  void draw()
+   {
+     float total= 0;
+     background(30);
+ for (int i = 15; i<480; i+=60){
+     for (int j = 15; j<480; j+=60){ 
+   Die rolly= new Die(j,i);
+      rolly.roll();
+      rolly.show();
+       total = total+rolly.dots;
+     }  
+     
+ }
+ fill(255);
+ textSize(50);
+  text ("Total Dots: " + (int)total, 50, 550);
+   }

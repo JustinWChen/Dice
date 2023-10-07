@@ -24,7 +24,7 @@
  }
  fill(255);
  textSize(50);
-  text ("Total Dots: " + (int)total, 50, 550);
+  text ("Total Dots: " + (int)total, 75, 550);
    }
 void mousePressed()
   {
